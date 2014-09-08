@@ -8,6 +8,7 @@
 
 #include "HighScore.h"
 #include "MenuMain.h"
+#include <fstream>
 
 HighScore HighScore::m_HighScore;
 
@@ -30,7 +31,7 @@ void HighScore::Render()
     
     std:: cout << "Top 10 Zorkish Adventure Champions \n" << std:: endl;
     
- 
+    std::cout << FileReader() <<std::endl;
     
     std:: cout <<"Press Enter or ESC to Return to the Main Menu";
 }
@@ -65,5 +66,23 @@ void HighScore::Run()
 
 void HighScore::Update()
 {
+    
+}
+
+std::string HighScore::FileReader()
+{
+    std::string fileContents;
+    std::ifstream file(fileName);
+    std::string str;
+    if (file.is_open()) {
+        while (std::getline(file, str))
+        {
+            fileContents += str;
+            fileContents.push_back('\n');
+          
+        }
+
+    }
+    return fileContents;
     
 }

@@ -19,6 +19,7 @@ public:
     virtual void Update();
     virtual void ProcessInput(GameManager * playerManager, char nKey);
     virtual void Run();
+    std::string FileReader();
     
     static HighScore* Instance();
     
@@ -30,6 +31,7 @@ protected:
 private:
     static HighScore m_HighScore;
     std::string name;
+    const std::string fileName = "highscores.txt";
     
 };
 
