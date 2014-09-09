@@ -8,6 +8,7 @@
 
 #include "SelectAdventure.h"
 
+
 SelectAdventure SelectAdventure::m_SelectAdventure;
 
 SelectAdventure::SelectAdventure()
@@ -38,11 +39,21 @@ void SelectAdventure::Render()
 
 void SelectAdventure::ProcessInput(GameManager * playerManager, char nKey)
 {
+     Player p("p", "d", "c");
+   
     switch (nKey) {
         case '1':
+        {
+           
             std:: cout << "A very Boring world indeed" << std:: endl;
-            break;
+            p.listInvent();
             
+            break;
+    
+        }
+        case 27:
+            ChangeState(playerManager, MenuMain::Instance());
+            break;
         default:
             std::cout<<"Invalid Input"<< std::endl;
             break;

@@ -10,14 +10,17 @@
 #define __Zorkish__SelectAdventure__
 #pragma once
 #include <iostream>
-#include "GameState.h"
-class SelectAdventure : public GameState
+#include "Menu.h"
+#include "Player.h"
+#include "MenuMain.h"
+
+class SelectAdventure : public Menu
 {
 public:
-    virtual void Render();
-    virtual void Update();
-    virtual void ProcessInput(GameManager * playerManager, char nKey);
-    virtual void Run();
+    void Render();
+    void Update();
+    void ProcessInput(GameManager * playerManager, char nKey);
+    void Run();
     
     static SelectAdventure* Instance();
     
@@ -29,6 +32,8 @@ protected:
 private:
     static SelectAdventure m_SelectAdventure;
     std::string name;
+    
+    
     
 };
 

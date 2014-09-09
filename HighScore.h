@@ -10,15 +10,15 @@
 #define __Zorkish__HighScore__
 #pragma once
 #include <iostream>
-#include "GameState.h"
+#include "Menu.h"
 
-class HighScore : public GameState
+class HighScore : public Menu
 {
 public:
-    virtual void Render();
-    virtual void Update();
-    virtual void ProcessInput(GameManager * playerManager, char nKey);
-    virtual void Run();
+    void Render();
+    void Update();
+    void ProcessInput(GameManager * playerManager, char nKey);
+    void Run();
     std::string FileReader();
     
     static HighScore* Instance();

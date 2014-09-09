@@ -10,16 +10,16 @@
 #define __Zorkish__About__
 #pragma once
 #include <iostream>
-#include "GameState.h"
+#include "Menu.h"
 
 
-class About : public GameState
+class About : public Menu
 {
 public:
-    virtual void Render();
-    virtual void Update();
-    virtual void ProcessInput(GameManager * playerManager, char nKey);
-    virtual void Run();
+    void Render();
+    void Update();
+    void ProcessInput(GameManager * playerManager, char nKey);
+    void Run();
     
     static About* Instance();
     

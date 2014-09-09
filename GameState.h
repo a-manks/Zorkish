@@ -19,9 +19,7 @@ public:
     virtual void Render() = 0;
     virtual void Update() = 0;
     virtual void ProcessInput(GameManager * playerManager, char nKey) =0;
-    void PrintHeader(std::string name);
     virtual void Run()=0;
-    
    
     virtual ~GameState();
     

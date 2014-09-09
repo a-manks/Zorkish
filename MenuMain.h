@@ -10,16 +10,17 @@
 #define __Zorkish__MenuMain__
 #pragma once
 #include <iostream>
-#include "GameState.h"
+#include "Menu.h"
 
-class MenuMain : public GameState
+
+
+class MenuMain : public Menu
 {
 public:
-    virtual void Render();
-    virtual void Update();
-    virtual void ProcessInput(GameManager * playerManager, char nKey);
-    virtual void Run();
-    
+    void Render();
+    void Update();
+    void ProcessInput(GameManager * playerManager, char nKey);
+    void Run();
     static MenuMain* Instance();
     
     virtual ~MenuMain();
@@ -30,6 +31,7 @@ protected:
 private:
     static MenuMain m_MenuMain;
     std::string name;
+    
     
 };
 

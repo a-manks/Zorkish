@@ -9,12 +9,6 @@
 #include "GameState.h"
 #include "GameManager.h"
 
-void GameState::PrintHeader(std::string name)
-{
-    std::cout<<"Zorkish :: "<< name << std::endl;
-    std::cout<<"---------------------------------------------------"<< std::endl;
-    
-}
 ////////Construction
 ////////Desturctution
 
