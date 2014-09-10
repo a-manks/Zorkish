@@ -36,8 +36,9 @@ void HighScore::Render()
     std:: cout <<"Press Enter or ESC to Return to the Main Menu";
 }
 
-void HighScore::ProcessInput(GameManager * playerManager, char nKey)
+void HighScore::ProcessInput(GameManager * playerManager, std::string str)
 {
+    char nKey = str[0];
     switch (nKey) {
         case 27:
             ChangeState(playerManager, MenuMain::Instance());

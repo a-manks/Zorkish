@@ -17,13 +17,13 @@
 class Player : public Entity
 {
 private:
-    Inventory inventory;
+    
     
     
 public:
     bool alive;
     int health;
-    
+    Inventory inventory;
     Player();
     Player(std::string idents, std::string oname, std::string desc);
     void listInvent();

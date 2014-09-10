@@ -10,10 +10,6 @@
 
 Inventory::Inventory()
 {
-    Item sword("Sword", "Blunt Sword", "a starting weapon");
-    put(sword);
-    Item key("Key", "Golden Master Key", ".....");
-    put(key);
     
 }
 

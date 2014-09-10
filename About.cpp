@@ -37,8 +37,9 @@ void About::Render()
     std:: cout <<"Press ESC or Enter to return to the Main Menu" << std:: endl;
 }
 
-void About::ProcessInput(GameManager * playerManager, char nKey)
+void About::ProcessInput(GameManager * playerManager, std::string str)
 {
+    char nKey = str[0];
     switch (nKey) {
         case 27:
             ChangeState(playerManager, MenuMain::Instance());

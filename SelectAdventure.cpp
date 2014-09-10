@@ -7,6 +7,7 @@
 //
 
 #include "SelectAdventure.h"
+#include "CommandProcessor.h"
 
 
 SelectAdventure SelectAdventure::m_SelectAdventure;
@@ -37,17 +38,18 @@ void SelectAdventure::Render()
     std:: cout <<"Select 1-2: ";
 }
 
-void SelectAdventure::ProcessInput(GameManager * playerManager, char nKey)
+void SelectAdventure::ProcessInput(GameManager * playerManager, std::string str)
 {
-     Player p("p", "d", "c");
-   
+    Player p("p", "d", "c");
+    char nKey = str[0];
     switch (nKey) {
         case '1':
         {
-           
+            std::string b;
             std:: cout << "A very Boring world indeed" << std:: endl;
-            p.listInvent();
-            
+            std::getline(std::cin, b);
+            CommandProcessor c;
+            c.process(b, &p);
             break;
     
         }

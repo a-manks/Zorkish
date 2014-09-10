@@ -14,11 +14,11 @@ int main(int argc, const char * argv[])
 
   
     GameManager g;
-    char ch;
-    while (ch != '5') {
-        std::cin>>ch;
+    std::string str;
+    while (str!= "5") {
+        std::getline(std::cin,str);
         
-        g.ProcessInput(ch);
+        g.ProcessInput(str);
     }
  
     

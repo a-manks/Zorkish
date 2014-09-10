@@ -8,7 +8,7 @@
 
 #include "GameManager.h"
 #include "GameState.h"
-#include <iostream>
+
 #include <assert.h>
 #include "MenuMain.h"
 
@@ -35,10 +35,10 @@ void GameManager::ChangeState(GameState* playerState)
         m_playerState->Render();
     }
 }
-void GameManager::ProcessInput(char nKey)
+void GameManager::ProcessInput(std::string str)
 {
     assert(m_playerState);
-    m_playerState->ProcessInput(this,nKey);
+    m_playerState->ProcessInput(this,str);
 }
 
 void GameManager::Update()

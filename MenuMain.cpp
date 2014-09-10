@@ -42,8 +42,9 @@ void MenuMain::Render()
     std:: cout <<"Select 1-5: ";
 }
 
-void MenuMain::ProcessInput(GameManager * playerManager, char nKey)
+void MenuMain::ProcessInput(GameManager * playerManager, std::string str)
 {
+    char nKey = str[0];
     switch (nKey) {
         case '1':
             ChangeState(playerManager, SelectAdventure::Instance());

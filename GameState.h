@@ -18,7 +18,7 @@ class GameState
 public:
     virtual void Render() = 0;
     virtual void Update() = 0;
-    virtual void ProcessInput(GameManager * playerManager, char nKey) =0;
+    virtual void ProcessInput(GameManager * playerManager, std::string str) =0;
     virtual void Run()=0;
    
     virtual ~GameState();

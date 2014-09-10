@@ -18,7 +18,7 @@ class About : public Menu
 public:
     void Render();
     void Update();
-    void ProcessInput(GameManager * playerManager, char nKey);
+    void ProcessInput(GameManager * playerManager, std::string str);
     void Run();
     
     static About* Instance();

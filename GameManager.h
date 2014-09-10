@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Adam Manks. All rights reserved.
 //
 
-#ifndef __Zorkish__GameManager__
-#define __Zorkish__GameManager__
+#include <iostream>
 #pragma once
 class GameState;
 
@@ -16,7 +15,7 @@ class GameManager
 public:
     void Render();
     void Update();
-    void ProcessInput(char nKey);
+    void ProcessInput(std::string str);
     
     GameManager();
     virtual ~GameManager();
@@ -27,5 +26,5 @@ private:
     GameState* m_playerState;
 };
 
-#endif /* defined(__Zorkish__GameManager__) */
+
 

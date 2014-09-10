@@ -16,7 +16,7 @@ class Player;
 class Command
 {
 public:
-    virtual void Execute(std::string commands, Player *p)=0;
+    virtual std::string execute(std::vector<std::string>commands, Player *p)=0;
     
 };
 
