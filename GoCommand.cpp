@@ -9,8 +9,6 @@
 
 #include "GoCommand.h"
 
-
-
 GoCommand GoCommand::m_goCommand;
 
 GoCommand::GoCommand()
@@ -21,6 +19,21 @@ GoCommand::GoCommand()
 GoCommand* GoCommand::instance()
 {
     return(&m_goCommand);
+}
+
+std::string GoCommand::changeLocation(std::string dir, Player *p)
+{
+    std::string temp = "Hmm can seem to go that way...";
+    //Location ltemp = *new Location();
+    for (int i=0; i< p->getLocation().locsToMove.size(); i++) {
+        if (dir == p->getLocation().locsToMove[i].direction && p->getLocation().locsToMove[i].isEnabled )
+        {
+            p->changeLocation(p->getLocation().locsToMove[i].locToMove);
+            temp ="Heading ";
+            break;
+        }
+    }
+    return temp;
 }
 
 std::string GoCommand::execute(std::vector<std::string> commands, Player *p)
@@ -35,16 +48,16 @@ std::string GoCommand::execute(std::vector<std::string> commands, Player *p)
         
         switch (d) {
             case 'n':
-                return "heading north";
+                return changeLocation(dir, p) + "North";
                 break;
             case's' :
-                return "heading south";
+                return changeLocation(dir, p) + "South";
                 break;
             case'e':
-                return "heading east";
+                return changeLocation(dir, p) + "East";
                 break;
             case'w' :
-                return "heading west";
+                return changeLocation(dir, p) + "West";
                 break;
                 
             default:
@@ -52,6 +65,6 @@ std::string GoCommand::execute(std::vector<std::string> commands, Player *p)
         }
         
     }
-    return "NOPE";
+    return NULL;
 }
-
+ 

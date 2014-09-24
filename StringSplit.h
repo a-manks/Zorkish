@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Adam Manks. All rights reserved.
 //
 
-#ifndef __Zorkish__StringSplit__
-#define __Zorkish__StringSplit__
+
 #pragma once
 #include <iostream>
 #include <vector>
@@ -21,4 +20,3 @@ public:
     
 };
 
-#endif /* defined(__Zorkish__StringSplit__) */

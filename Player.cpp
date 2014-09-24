@@ -9,6 +9,7 @@
 #include "Player.h"
 
 
+
 Player::Player()
 {
     
@@ -18,15 +19,27 @@ Player::Player(std::string idents, std::string oname, std::string desc):Entity(i
 {
     health = 100;
     alive = true;
-
     
     
 }
 
-
-
-void Player::listInvent()
+Inventory& Player::getInventory()
 {
-    std::cout<<"Your inventory conatins: \n"<<std::endl;
-    std::cout<<inventory.list();
+    return inventory;
+}
+
+
+
+void Player::changeLocation(std::string locname)
+{
+    locName = locname;
+}
+
+Location& Player::getLocation()
+{
+    return loc;
+}
+void Player::setLocation(Location l)
+{
+    loc = l;
 }

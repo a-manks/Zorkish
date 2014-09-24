@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 Adam Manks. All rights reserved.
 //
 
-#ifndef __Zorkish__Inventory__
-#define __Zorkish__Inventory__
+
 #pragma once
 #include <iostream>
 #include <vector>
 #include "Item.h"
+
 
 
 class Item;
@@ -25,11 +25,12 @@ private:
 public:
     Inventory();
     bool hasItem(std::string ids);
-    void put(Item itm);
-    Item* fetch (std::string ids);
+    void put(Item& itm);
+    Item& fetch (std::string ids);
     std::string list();
+    void drop(std::string ids);
+    bool isEmpty();
     ~Inventory();
     
 };
 
-#endif /* defined(__Zorkish__Inventory__) */

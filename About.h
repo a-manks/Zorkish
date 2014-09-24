@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Adam Manks. All rights reserved.
 //
 
-#ifndef __Zorkish__About__
-#define __Zorkish__About__
 #pragma once
 #include <iostream>
 #include "Menu.h"
@@ -37,5 +35,3 @@ private:
 
 
 
-
-#endif /* defined(__Zorkish__About__) */

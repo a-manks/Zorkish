@@ -29,6 +29,7 @@ Entity::~Entity()
 
 bool Entity:: areYou(std::string ids)
 {
+    
     bool temp = false;
     for (int i =0; i< identifiers.size(); i++) {
     
@@ -45,3 +46,12 @@ void Entity::addIdentifier(std::string ids)
     identifiers.push_back(ids);
 }
 
+std::string Entity::getName()
+{
+    return name;
+}
+
+std::string Entity::getDesc()
+{
+    return description;
+}

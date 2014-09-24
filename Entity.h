@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Adam Manks. All rights reserved.
 //
 
-#ifndef __Zorkish__Entity__
-#define __Zorkish__Entity__
+
 #pragma once
 #include <iostream>
 #include <vector>
@@ -29,8 +28,10 @@ public:
     std::string firstId();
     void addIdentifier(std::string ids);
     virtual ~Entity();
+    std::string getName();
+    std::string getDesc();
     
     
 };
 
-#endif /* defined(__Zorkish__Entity__) */
+

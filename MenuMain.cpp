@@ -16,14 +16,13 @@ MenuMain MenuMain::m_MenuMain;
 
 MenuMain::MenuMain()
 {
-    
+ 
 }
 
 MenuMain::~MenuMain()
 {
     
 }
-
 
 void MenuMain::Render()
 {
@@ -38,7 +37,6 @@ void MenuMain::Render()
     std:: cout <<"3. Help " << std:: endl;
     std:: cout <<"4. About" << std:: endl;
     std:: cout <<"5. Quit " << std:: endl;
-    
     std:: cout <<"Select 1-5: ";
 }
 

@@ -17,7 +17,9 @@ Menu ::Menu()
 
 void Menu::PrintHeader(std::string name)
 {
-    std::cout<<"Zorkish :: "<< name << std::endl;
+    std::cout<<"---------------------------------------------------"<< std::endl;
+    std::cout<<"                Zorkish :: "<< name << std::endl;
+    std::cout<<"___________________________________________________"<< std::endl;
     std::cout<<"---------------------------------------------------"<< std::endl;
     
 }

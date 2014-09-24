@@ -23,7 +23,7 @@ GameManager::GameManager()
 
 GameManager:: ~GameManager()
 {
-    
+    delete m_playerState;
 }
 
 void GameManager::ChangeState(GameState* playerState)

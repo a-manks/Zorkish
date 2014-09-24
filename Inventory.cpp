@@ -15,9 +15,7 @@ Inventory::Inventory()
 
 Inventory::~Inventory()
 {
-    if (items.size() <= 0) {
-        items.clear();
-    }
+    
 }
 
 
@@ -44,22 +42,44 @@ bool Inventory::hasItem(std::string ids)
     return temp;
 }
 
-void Inventory::put(Item itm)
+void Inventory::put(Item& itm)
 {
     items.push_back(itm);
 }
 
-
-Item* Inventory:: fetch(std::string ids)
+void Inventory::drop(std::string ids)
 {
     
+    for (int i=0; i< items.size(); i++) {
+        if(items[i].areYou(ids)) {
+            items.erase(items.begin() +i);
+        }
+        
+    }
+    
+}
+
+
+Item& Inventory::fetch(std::string ids)
+{
+    
+    Item g;
     for (int i =0; i < items.size(); i++) {
         if(items[i].areYou(ids)) {
-            return items[i].instance();
+            return items[i];
         }
     }
     
-    return nullptr;
+    return g;
 
+}
+
+bool Inventory::isEmpty()
+{
+    bool temp = true;
+    if (! items.empty()) {
+        temp = false;
+    }
+    return temp;
 }
 

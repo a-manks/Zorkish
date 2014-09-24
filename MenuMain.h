@@ -6,13 +6,9 @@
 //  Copyright (c) 2014 Adam Manks. All rights reserved.
 //
 
-#ifndef __Zorkish__MenuMain__
-#define __Zorkish__MenuMain__
 #pragma once
 #include <iostream>
 #include "Menu.h"
-
-
 
 class MenuMain : public Menu
 {
@@ -38,4 +34,3 @@ private:
 
 
 
-#endif /* defined(__Zorkish__MenuMain__) */

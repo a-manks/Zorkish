@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Adam Manks. All rights reserved.
 //
 
-#ifndef __Zorkish__Menu__
-#define __Zorkish__Menu__
+
 #pragma once
 #include <iostream>
 #include "GameState.h"
@@ -24,5 +23,3 @@ protected:
     
     Menu();
 };
-
-#endif /* defined(__Zorkish__Menu__) */

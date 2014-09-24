@@ -17,8 +17,10 @@ int main(int argc, const char * argv[])
     std::string str;
     while (str!= "5") {
         std::getline(std::cin,str);
-        
+        g.Render();
         g.ProcessInput(str);
+        g.Update();
+        
     }
  
     

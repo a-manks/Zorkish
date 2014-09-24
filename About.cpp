@@ -11,6 +11,7 @@
 
 #include "MenuMain.h"
 #include "SelectAdventure.h"
+#include "FileLoader.h"
 
 About About::m_About;
 
@@ -35,6 +36,7 @@ void About::Render()
     std:: cout << "Written by: Adam Manks - 9736271\n" << std:: endl;
     
     std:: cout <<"Press ESC or Enter to return to the Main Menu" << std:: endl;
+    FileLoader::readFile("MountainWorld.txt");
 }
 
 void About::ProcessInput(GameManager * playerManager, std::string str)

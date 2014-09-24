@@ -16,6 +16,9 @@
 #include "Command.h"
 #include "GoCommand.h"
 #include "Look.h"
+#include "TakeCommand.h"
+#include "DropCommand.h"
+#include "QuitCommand.h"
 
 class CommandProcessor
 {
@@ -23,15 +26,13 @@ private:
     static CommandProcessor m_CommandProcessor;
     std::map<std::string, Command*> commandDict;
     std::map<std::string, Command*>::iterator it;
-    Look look;
-    GoCommand goCommand;
+   
     
 public:
     CommandProcessor();
     CommandProcessor* instance();
-    
     static std::vector<std::string>split(std::string str);
-    void process(std::string commands, Player *p);
+    void process(std::string& commands, Player* p);
     void populateCommandDict();
     
 };

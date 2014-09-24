@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Adam Manks. All rights reserved.
 //
 
-#ifndef __Zorkish__GameState__
-#define __Zorkish__GameState__
+
 #pragma once
 #include <iostream>
 
@@ -33,5 +32,3 @@ protected:
 };
 
 
-
-#endif /* defined(__Zorkish__GameState__) */

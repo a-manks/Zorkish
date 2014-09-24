@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Adam Manks. All rights reserved.
 //
 
-#ifndef __Zorkish__HighScore__
-#define __Zorkish__HighScore__
+
 #pragma once
 #include <iostream>
 #include "Menu.h"
@@ -36,4 +35,4 @@ private:
 };
 
 
-#endif /* defined(__Zorkish__HighScore__) */
+

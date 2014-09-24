@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Adam Manks. All rights reserved.
 //
 
-#ifndef __Zorkish__Item__
-#define __Zorkish__Item__
+
 #pragma once
 #include <iostream>
 #include "Entity.h"
@@ -27,4 +26,4 @@ public:
     std::string getName();
 };
 
-#endif /* defined(__Zorkish__Item__) */
+
